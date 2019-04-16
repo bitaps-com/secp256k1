@@ -659,6 +659,13 @@ SECP256K1_API SECP256K1_WARN_UNUSED_RESULT int secp256k1_ec_pubkey_combine(
     size_t n
 ) SECP256K1_ARG_NONNULL(2) SECP256K1_ARG_NONNULL(3);
 
+SECP256K1_API int nonce_function_rfc6979(unsigned char *nonce32,
+                                         const unsigned char *msg32,
+                                         const unsigned char *key32,
+                                         const unsigned char *algo16,
+                                         void *data,
+                                         unsigned int counter);
+    
 #ifdef __cplusplus
 }
 #endif
